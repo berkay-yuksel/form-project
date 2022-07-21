@@ -2,7 +2,7 @@
 
 .page_container img{
   margin: 2em;
-  position: sticky;
+  /* position: sticky; */
   top: 2em;
 }
 
@@ -14,6 +14,7 @@
   justify-content: center;
 }
 
+
 .form_container {
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@
   background-color: rgb(250, 249, 252);
   border-radius: 15px;
 }
+
 
 .form_container label {
   margin: 1em;
@@ -32,9 +34,9 @@
 
 
 
-.form_container legend h3 {
+/* .form_container legend h3 {
   font-family: 'Montserrat', sans-serif;
-}
+} */
 
 /* .form_container label h5 {
   margin-block-start: 0;
@@ -84,9 +86,15 @@
 
 
 .form_container button {
-  width: 75px;
+  width: 100px;
+  height: 35px;
+  padding: 10px 24px;
+  border-radius: 8px;
   margin: 1em;
-  padding: 0.2em; 
+  margin-left: 22em;
+  display: flex;
+/* background-color: #0c4492; */
+  /* padding: 0.2em;  */
 }
 
 
@@ -94,6 +102,7 @@
 
 .checkbox-wrapper{
   display: flex;
+  margin-bottom: 20px;
 }
 
 
@@ -118,7 +127,7 @@
 
 .form-label{
   color: black;
-  font-size: 17px;
+  font-size: 16px;
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
 }
@@ -129,7 +138,7 @@
   height: 35px;
   border: none;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.375);
   border: 0.5px solid darkgrey;
 }
@@ -140,7 +149,7 @@
   height: 35px;
   border: none;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.375);
   border: 0.5px solid darkgrey;
 }
@@ -151,16 +160,18 @@
   height: 35px;
   border: none;
   border-radius: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   background: rgba(255, 255, 255, 0.375);
   border: 0.5px solid darkgrey;
 }
 
-.alt-baslıklar{
+
+.ust-baslıklar{
   color: black;
-  font-size: 20px;
+  font-size: 21px;
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
 }
 
 

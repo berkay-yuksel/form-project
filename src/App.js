@@ -66,7 +66,7 @@ const App = () => {
          
          
 
-          <label className="alt-baslıklar">
+          <label className="ust-baslıklar">
             Kişisel Bilgiler
           </label>
           
@@ -124,7 +124,7 @@ const App = () => {
         </div>
 
 
-        <label className="alt-baslıklar">
+        <label className="ust-baslıklar">
           İletişim Bilgileri
         </label>
 
@@ -149,7 +149,7 @@ const App = () => {
         </div>
 
 
-        <label className="alt-baslıklar">
+        <label className="ust-baslıklar">
           Eğitim Bilgileri
         </label>
 
@@ -174,7 +174,7 @@ const App = () => {
 
 
 
-        <label className="alt-baslıklar">
+        <label className="ust-baslıklar">
           Başvuru Yapılan Pozisyon
         </label>
             
@@ -192,7 +192,7 @@ const App = () => {
 
 
 
-        <label className="alt-baslıklar">
+        <label className="ust-baslıklar">
           Bilgisayar Bilgisi/Yabancı Dil
         </label>
 
@@ -230,39 +230,37 @@ const App = () => {
         
 
 
-        <label className="alt-baslıklar">
+        <label className="ust-baslıklar">
           Tecrübeler
         </label>
 
 
       <div className="form-wrapper">
-        <label>
+        <label></label>
           <input className="form-input"
             type="text"
             value={inputs.tecrube}
             onChange={(e)=>{handleChange('tecrube',e.target.value)}}
-            />
-         </label>
+            />      
       </div>
 
 
-        <label className="alt-baslıklar">
+        <label className="ust-baslıklar">
           Referanslar
         </label>
 
 
       <div className="form-wrapper">
-        <label>
+        <label></label>
           <input className="form-input"
             type="text"
             value={inputs.referans}
             onChange={(e)=>{handleChange('referans',e.target.value)}}
-            />
-         </label>
+            />        
       </div>
 
 
-         <label className="alt-baslıklar">
+         <label className="ust-baslıklar">
            Diğer Bilgiler
          </label>
 
