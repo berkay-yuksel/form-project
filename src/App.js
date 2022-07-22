@@ -107,6 +107,7 @@ const App = () => {
              <select className="form-input-cinsiyet"
               value={inputs.cinsiyet}
               onChange={(e)=>{handleChange('cinsiyet',e.target.value)}}>
+                <option value=" ">Cinsiyet Seçiniz</option>
                 <option value="erkek">erkek</option>
                 <option value="kadın">Kadın</option>
                 
@@ -184,6 +185,7 @@ const App = () => {
              <select className="form-input-pozisyon"
               value={inputs.pozisyon}
               onChange={(e)=>{handleChange('pozisyon',e.target.value)}}>
+                <option value=" ">Başvuru Yapmak İstediğiniz Pozisyonu Seçiniz</option>
                 <option value="ik">İK</option>
                 <option value="erpuzmanı">ERP Uzmanı</option>
                 
@@ -209,6 +211,34 @@ const App = () => {
 
           <label className="my-label">C++
             <input type="checkbox"         onChange={(e)=>{handleChange('code2',e.target.value)}}   value="c++" />
+          </label>
+
+          <label className="my-label">Javascript
+            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
+          </label>
+
+          <label className="my-label">Javascript
+            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
+          </label>
+
+          <label className="my-label">Javascript
+            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
+          </label>
+
+          <label className="my-label">Javascript
+            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
+          </label>
+
+          <label className="my-label">Javascript
+            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
+          </label>
+
+          <label className="my-label">Javascript
+            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
+          </label>
+
+          <label className="my-label">Javascript
+            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
           </label>
 
           <label className="my-label">Javascript
