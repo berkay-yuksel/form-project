@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap%27');
 
 .page_container img{
-  margin: 2em;
+  /* margin: 2em; */
   /* position: sticky; */
   top: 2em;
+  margin: 2em auto;
+  display: block;
 }
 
 
@@ -19,7 +21,7 @@
   display: flex;
   flex-direction: column;
   padding: 3em;
-  background-color: rgb(250, 249, 252);
+  background-color: #f4fbff;
   border-radius: 15px;
   max-width: 600px;
 }
@@ -27,7 +29,7 @@
 
 .form_container label {
   margin: 1em;
-  width: 40vw;
+  /* width: 40vw; */
   
 }
 
@@ -96,28 +98,29 @@
   display: flex; */
 /* background-color: #0c4492; */
   /* padding: 0.2em;  */
+  /* margin: 4px 2px; */
 
+  margin: 0 auto;
+  display: block;
   border-radius: 10px;
   display: flex;
-
   border: none;
   padding: 16px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  background-color: white; 
+  background-color: #f4fbff; 
   color: black; 
-  border: 2px solid #008CBA;
+  border: 2px solid #184275;
 }
 
 
 
 .form_container button:hover{
-  background-color: #008CBA;
+  background-color: #184275;
   color: white;
 }
 
@@ -132,7 +135,7 @@
 
 
 .my-label{
-  margin: 10px !important;
+  /* margin: 10px !important; */
   width:max-content !important ;
   font-family: 'Montserrat', sans-serif;
 }
@@ -151,7 +154,7 @@
 
 
 .form-label{
-  color: black;
+  color: #262b37;
   font-size: 16px;
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;
@@ -160,72 +163,89 @@
 
 .form-input{
   width: 100%;
-  height: 35px;
+  height: 54px;
   border: none;
+  color: #48566a;
+  padding-left: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.375);
+  background: #f4fbff;
   border: 0.5px solid darkgrey;
 }
 
 
 .form-input-number{
   width: 100%;
-  height: 35px;
+  height: 54px;
   border: none;
+  color: #48566a;
+  padding-left: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.375);
+  background: #f4fbff;
   border: 0.5px solid darkgrey;
 }
 
 
 .form-input-email{
   width: 100%;
-  height: 35px;
+  height: 54px;
   border: none;
+  color: #48566a;
+  padding-left: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.375);
+  background: #f4fbff;
   border: 0.5px solid darkgrey;
 }
 
 
 .form-input-date{
   width: 100%;
-  height: 35px;
+  height: 54px;
   border: none;
+  color: #48566a;
+  padding-left: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.375);
+  background: #f4fbff;
   border: 0.5px solid darkgrey;
 }
 
 
 .form-input-cinsiyet{
   width: 100%;
-  height: 35px;
+  height: 54px;
   border: none;
+  color: #48566a;
+  padding-left: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.375);
+  background: #f4fbff;
   border: 0.5px solid darkgrey;
 }
 
 
 .form-input-pozisyon{
   width: 100%;
-  height: 35px;
+  height: 54px;
   border: none;
+  color: #48566a;
+  padding-left: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: rgba(255, 255, 255, 0.375);
+  background: #f4fbff;
   border: 0.5px solid darkgrey;
+}
+
+.option-input{
+  font-family: 'Montserrat', sans-serif;
+  color: #48566a;
 }
 
 
 .ust-baslıklar{
-  color: black;
+  color: #040405;
   font-size: 21px;
   margin-bottom: 10px;
   font-family: 'Montserrat', sans-serif;

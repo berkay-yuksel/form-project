@@ -14,10 +14,6 @@ const App = () => {
     universite:'',
     bolum:'',
     pozisyon:'',
-    code:'',
-    code1:'',
-    code2:'',
-    code3:'',
     languages:'',
     tecrube:'',
     referans:'',
@@ -107,9 +103,9 @@ const App = () => {
              <select className="form-input-cinsiyet"
               value={inputs.cinsiyet}
               onChange={(e)=>{handleChange('cinsiyet',e.target.value)}}>
-                <option value=" ">Cinsiyet Seçiniz</option>
-                <option value="erkek">erkek</option>
-                <option value="kadın">Kadın</option>
+                <option className="option-input" value=" ">Cinsiyet Seçiniz</option>
+                <option className="option-input" value="erkek">Erkek</option>
+                <option className="option-input" value="kadın">Kadın</option>
                 
               </select>
           </div>
@@ -185,9 +181,9 @@ const App = () => {
              <select className="form-input-pozisyon"
               value={inputs.pozisyon}
               onChange={(e)=>{handleChange('pozisyon',e.target.value)}}>
-                <option value=" ">Başvuru Yapmak İstediğiniz Pozisyonu Seçiniz</option>
-                <option value="ik">İK</option>
-                <option value="erpuzmanı">ERP Uzmanı</option>
+                <option className="option-input" value=" ">Başvuru Yapmak İstediğiniz Pozisyonu Seçiniz</option>
+                <option className="option-input" value="ik">İK</option>
+                <option className="option-input" value="erpuzmanı">ERP Uzmanı</option>
                 
               </select>
            </div>
@@ -318,7 +314,7 @@ const App = () => {
 
 
 
-          <button type="submit">submit</button>
+          <button type="submit">Gönder</button>
         </form>
       </div>
     </div>
