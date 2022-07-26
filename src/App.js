@@ -40,27 +40,13 @@ const App = () => {
     <div className="page_container">
 
 
-      <img src={bitesLogo}  width="272px" height="82px"/>
+      <img src={bitesLogo}  width="150px"/>
 
 
       <div className="form_section">
         <form onSubmit={handleSubmit} className="form_container">
          
 
-
-  {/* <form> 
-        <div className="form-wrapper">
-          <label className="form-label">Başlık</label>
-           <input className="form-input" 
-             type="text"
-             name="baslık"
-             value={inputs.baslık || ""}
-             onChange={handleChange}
-            />
-         </div>
-       </form>   */}
-         
-         
 
           <label className="ust-baslıklar">
             Kişisel Bilgiler
@@ -127,7 +113,7 @@ const App = () => {
 
 
       <div className="form-wrapper">
-         <label className="form-label">Email:</label>
+         <label className="form-label">E-posta:</label>
             <input className="form-input-email"
               type="email"
               value={inputs.mail}
@@ -197,49 +183,48 @@ const App = () => {
        
       <div className="checkbox-wrapper">
 
-         <label className="my-label">Python
-           <input type="checkbox"         onChange={(e)=>{handleChange('code',e.target.value)}}  value="python" />
-         </label>
+      <input className="my-checkbox" type="checkbox"         onChange={(e)=>{handleChange('code',e.target.value)}}  value="python" />
+         <label className="my-label">Python</label>
+         
 
-          <label className="my-label">C
-            <input type="checkbox"        onChange={(e)=>{handleChange('code1',e.target.value)}}   value="c" />
-          </label>
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code1',e.target.value)}}   value="c" />
+         <label className="my-label">C</label>
 
-          <label className="my-label">C++
-            <input type="checkbox"         onChange={(e)=>{handleChange('code2',e.target.value)}}   value="c++" />
-          </label>
 
-          <label className="my-label">Javascript
-            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
-          </label>
+       <input className="my-checkbox" type="checkbox"         onChange={(e)=>{handleChange('code2',e.target.value)}}   value="c++" />
+         <label className="my-label">C++</label>
 
-          <label className="my-label">Javascript
-            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
-          </label>
 
-          <label className="my-label">Javascript
-            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
-          </label>
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="php" />
+         <label className="my-label">PHP</label>
 
-          <label className="my-label">Javascript
-            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
-          </label>
 
-          <label className="my-label">Javascript
-            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
-          </label>
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code4',e.target.value)}}   value="C#" />
+         <label className="my-label">C#</label>
 
-          <label className="my-label">Javascript
-            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
-          </label>
 
-          <label className="my-label">Javascript
-            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
-          </label>
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code5',e.target.value)}}   value="react" />
+         <label className="my-label">React</label>
 
-          <label className="my-label">Javascript
-            <input type="checkbox"        onChange={(e)=>{handleChange('code3',e.target.value)}}   value="javascript" />
-          </label>
+
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code6',e.target.value)}}   value="java" />
+         <label className="my-label">Java</label>
+
+
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code7',e.target.value)}}   value="matlab" />
+         <label className="my-label">Matlab</label>
+
+
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code8',e.target.value)}}   value="javascript" />
+         <label className="my-label">Javascript</label>
+
+
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code9',e.target.value)}}   value="javascript" />
+         <label className="my-label">Javascript</label>
+
+
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code10',e.target.value)}}   value="javascript" />
+         <label className="my-label">Javascript</label>
 
        </div>
        
