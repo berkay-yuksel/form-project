@@ -8,7 +8,7 @@ const App = () => {
     tc:'',
     birthday:'',
     cinsiyet:'',
-    adress:'',
+    medenidurum:'',
     mail:'',
     telno:'',
     universite:'',
@@ -97,14 +97,19 @@ const App = () => {
           </div>
 
 
-       <div className="form-wrapper">
-         <label className="form-label">Adress:</label>
-          <input className="form-input"
-            type="text"
-            value={inputs.adress}
-            onChange={(e)=>{handleChange('adress',e.target.value)}}
-            />
-        </div>
+
+          <div className="checkbox-wrapper">
+            <label className="form-label-medenidurum">Medeni Durum:</label>
+
+          <input className="my-checkbox" type="checkbox"         onChange={(e)=>{handleChange('medenidurum',e.target.value)}}  value="evli" />
+            <label className="my-label">Evli</label>
+         
+          <input className="my-checkbox" type="checkbox"         onChange={(e)=>{handleChange('medenidurum',e.target.value)}}  value="bekar" />
+            <label className="my-label">Bekar</label>
+
+          </div>
+
+       
 
 
         <label className="ust-baslıklar">
@@ -215,8 +220,8 @@ const App = () => {
          <label className="my-label">Matlab</label>
 
 
-       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code8',e.target.value)}}   value="javascript" />
-         <label className="my-label">Javascript</label>
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code8',e.target.value)}}   value="swift" />
+         <label className="my-label">Swift</label>
 
 
        <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code9',e.target.value)}}   value="javascript" />
@@ -242,7 +247,7 @@ const App = () => {
 
 
         <label className="ust-baslıklar">
-          Tecrübeler
+          Yetenekler
         </label>
 
 
@@ -297,6 +302,16 @@ const App = () => {
           
 
 
+
+       <div className="">
+          <label className="form-label-cv">CV ve Ön Yazı Yükleyiniz:</label>
+            <input className="form-input-cv"
+              type="file"  
+              onChange={(e)=>{console.log(e.target.files)}} 
+              />
+        </div>
+
+        
 
 
           <button type="submit">Gönder</button>
