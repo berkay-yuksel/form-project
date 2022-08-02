@@ -2,6 +2,13 @@ import { useState } from "react";
 
 import "./App.css";
 import bitesLogo from './logo.png';
+
+import ReactPhoneInput from 'react-phone-input-2'
+import 'react-phone-input-2/lib/style.css'
+
+import { MultiSelect } from "react-multi-select-component";
+
+
 const App = () => {
   const [inputs, setInputs] = useState({
     username:'',
@@ -10,17 +17,31 @@ const App = () => {
     cinsiyet:'',
     medenidurum:'',
     mail:'',
-    telno:'',
+    phone:'',
     universite:'',
     bolum:'',
     pozisyon:'',
     languages:'',
-    tecrube:'',
+    yetenekler:'',
     referans:'',
     basarı:'',
     hobi:'',
   });
   
+
+
+
+  const options = [
+    {label: "İngilizce", value: "ingilizce"},
+    {label: "Almanca", value: "almanca"},
+    {label: "Fransızca", value: "fransızca"},
+    {label: "İtalyanca", value: "italyanca"},
+    {label: "İspanyolca", value: "ispanyolca"},
+  ];
+  
+  const [selected, setSelected] = useState([]);
+
+
 
 
   const handleChange = (key,value) => {
@@ -36,6 +57,8 @@ const App = () => {
     console.log(inputs);
    };
 
+
+
   return (
     <div className="page_container">
 
@@ -46,6 +69,7 @@ const App = () => {
       <div className="form_section">
         <form onSubmit={handleSubmit} className="form_container">
          
+
 
 
           <label className="ust-baslıklar">
@@ -64,6 +88,7 @@ const App = () => {
          </div>
          
 
+
        <div className="form-wrapper">
           <label className="form-label">T.C. Numarası:</label>
             <input className="form-input-number"
@@ -74,6 +99,7 @@ const App = () => {
         </div>
 
 
+
        <div className="form-wrapper">
           <label className="form-label">Doğum Tarihi:</label>
             <input className="form-input-date"
@@ -82,6 +108,7 @@ const App = () => {
               onChange={(e)=>{handleChange('birthday',e.target.value)}}
             />
          </div>
+
 
           
          <div className="form-wrapper">
@@ -117,6 +144,7 @@ const App = () => {
         </label>
 
 
+
       <div className="form-wrapper">
          <label className="form-label">E-posta:</label>
             <input className="form-input-email"
@@ -127,19 +155,23 @@ const App = () => {
        </div>
            
 
+
       <div className="form-wrapper">
          <label className="form-label">Telefon Numarası:</label>
-            <input className="form-input-number"
-              type="number"
-              value={inputs.telno}
-              onChange={(e)=>{handleChange('telno',e.target.value)}}
+            <ReactPhoneInput className=""
+               country={'tr'}
+               value={inputs.phone}
+                onChange={(e)=>{console.log(e)}}
+              
             />
         </div>
+
 
 
         <label className="ust-baslıklar">
           Eğitim Bilgileri
         </label>
+
 
      <div className="form-wrapper">
         <label className="form-label">Üniversite:</label>
@@ -151,6 +183,7 @@ const App = () => {
       </div>
 
 
+
       <div className="form-wrapper">
        <label className="form-label">Bölüm:</label>
          <input className="form-input"
@@ -159,6 +192,7 @@ const App = () => {
             onChange={(e)=>{handleChange('bolum',e.target.value)}}
             />
         </div>
+
 
 
 
@@ -181,8 +215,27 @@ const App = () => {
 
 
 
+           <label className="ust-baslıklar">
+             Yabancı Dil
+          </label>
+
+
+
+          <div className="form-wrapper">
+            <label></label>
+             <MultiSelect 
+               options={options}
+               value={selected}
+               onChange={(e)=>{console.log(e)}}
+               labelledBy="Select"
+               />
+          </div>
+
+
+
+
         <label className="ust-baslıklar">
-          Bilgisayar Bilgisi/Yabancı Dil
+          Bilgisayar Bilgisi
         </label>
 
        
@@ -235,14 +288,14 @@ const App = () => {
        
       
 
-      <div className="form-wrapper">
+      {/* <div className="form-wrapper">
         <label className="form-label">Yabancı Dil:</label>
           <input className="form-input"
             type="text"
             value={inputs.languages}
             onChange={(e)=>{handleChange('languages',e.target.value)}}
             />  
-       </div>
+       </div> */}
         
 
 
@@ -255,10 +308,11 @@ const App = () => {
         <label></label>
           <input className="form-input"
             type="text"
-            value={inputs.tecrube}
-            onChange={(e)=>{handleChange('tecrube',e.target.value)}}
+            value={inputs.yetenekler}
+            onChange={(e)=>{handleChange('yetenekler',e.target.value)}}
             />      
       </div>
+
 
 
         <label className="ust-baslıklar">
@@ -276,6 +330,7 @@ const App = () => {
       </div>
 
 
+
          <label className="ust-baslıklar">
            Diğer Bilgiler
          </label>
@@ -289,6 +344,7 @@ const App = () => {
             onChange={(e)=>{handleChange('basarı',e.target.value)}}
             /> 
       </div>
+
 
 
       <div className="form-wrapper">
