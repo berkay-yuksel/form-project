@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import "./App.css";
 import bitesLogo from './logo.png';
@@ -21,13 +21,42 @@ const App = () => {
     universite:'',
     bolum:'',
     pozisyon:'',
-    languages:'',
+    languages:[],
     yetenekler:'',
     referans:'',
     basarı:'',
     hobi:'',
   });
   
+
+
+
+
+  const initialState={
+    username:'',
+    tc:'',
+    birthday:'',
+    cinsiyet:'',
+    medenidurum:'',
+    mail:'',
+    phone:'',
+    universite:'',
+    bolum:'',
+    pozisyon:'',
+    languages:[],
+    yetenekler:'',
+    referans:'',
+    basarı:'',
+    hobi:'',
+  }
+  
+  
+  
+  const clearState = () => {
+    setInputs({ ...initialState });
+  };
+
+
 
 
 
@@ -43,6 +72,13 @@ const App = () => {
 
 
 
+  useEffect(() => {
+    setInputs({...inputs,languages:selected})
+      }, [selected]);
+
+
+
+
 
   const handleChange = (key,value) => {
     // console.log(event.target.value);
@@ -52,10 +88,18 @@ const App = () => {
     setInputs({...inputs,[key]:value})
   };
 
+
+
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
+
+    setTimeout(() => {
+      clearState();
+      alert('Bilgileriniz Gönderildi.');
+    }, 1000);
    };
+
 
 
 
@@ -113,7 +157,7 @@ const App = () => {
           
          <div className="form-wrapper">
            <label className="form-label">Cinsiyet:</label>
-             <select className="form-input-cinsiyet"
+             <select className="form-input-select"
               value={inputs.cinsiyet}
               onChange={(e)=>{handleChange('cinsiyet',e.target.value)}}>
                 <option className="option-input" value=" ">Cinsiyet Seçiniz</option>
@@ -161,8 +205,8 @@ const App = () => {
             <ReactPhoneInput className=""
                country={'tr'}
                value={inputs.phone}
-                onChange={(e)=>{console.log(e)}}
-              
+               // onChange={(e)=>{console.log(e)}}
+              onChange={(e)=>{handleChange('phone',e)}}
             />
         </div>
 
@@ -173,7 +217,42 @@ const App = () => {
         </label>
 
 
-     <div className="form-wrapper">
+
+        <div className="form-wrapper">
+          <label className="form-label">Üniversite:</label>
+              <select className="form-input-select"
+                value={inputs.universite}
+                onChange={(e)=>{handleChange('universite',e.target.value)}}>
+                 <option className="option-input" value=" ">Üniversite Seçiniz</option>
+                 <option className="option-input" value="cukurova">Çukurova Üniversitesi</option>
+                 <option className="option-input" value="odtu">Orta Doğu Teknik Üniversitesi</option>
+                 <option className="option-input" value="hacettepe">Hacettepe Üniversitesi</option>
+                 <option className="option-input" value="itu">İstanbul Teknik Üniversitesi</option>
+                 <option className="option-input" value="bogazici">Boğaziçi Üniversitesi</option>
+                
+              </select>          
+           </div>
+
+
+
+           <div className="form-wrapper">
+           <label className="form-label">Üniversite Bölümü:</label>
+              <select className="form-input-select"
+                value={inputs.bolum}
+                onChange={(e)=>{handleChange('bolum',e.target.value)}}>
+                 <option className="option-input" value=" ">Üniversite Bölümü Seçiniz</option>
+                 <option className="option-input" value="bilgisayar mühendisliği">Bilgisayar Mühendisliği</option>
+                 <option className="option-input" value="endustri">Endüstri Mühendisliği</option>
+                 <option className="option-input" value="elektirk">Elektrik Elektronik Mühendisliği</option>
+                 <option className="option-input" value="yazılım">Yazılım Mühendisliği</option>
+                
+              </select>          
+           </div>
+
+
+
+
+     {/* <div className="form-wrapper">
         <label className="form-label">Üniversite:</label>
            <input className="form-input"
             type="text"
@@ -191,7 +270,7 @@ const App = () => {
             value={inputs.bolum}
             onChange={(e)=>{handleChange('bolum',e.target.value)}}
             />
-        </div>
+        </div> */}
 
 
 
@@ -203,7 +282,7 @@ const App = () => {
 
         <div className="form-wrapper">
            <label> </label>
-             <select className="form-input-pozisyon"
+             <select className="form-input-select"
               value={inputs.pozisyon}
               onChange={(e)=>{handleChange('pozisyon',e.target.value)}}>
                 <option className="option-input" value=" ">Başvuru Yapmak İstediğiniz Pozisyonu Seçiniz</option>
@@ -226,7 +305,7 @@ const App = () => {
              <MultiSelect 
                options={options}
                value={selected}
-               onChange={(e)=>{console.log(e)}}
+               onChange={setSelected}
                labelledBy="Select"
                />
           </div>
@@ -237,6 +316,7 @@ const App = () => {
         <label className="ust-baslıklar">
           Bilgisayar Bilgisi
         </label>
+
 
        
       <div className="checkbox-wrapper">
@@ -277,8 +357,8 @@ const App = () => {
          <label className="my-label">Swift</label>
 
 
-       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code9',e.target.value)}}   value="javascript" />
-         <label className="my-label">Javascript</label>
+       <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code9',e.target.value)}}   value="css" />
+         <label className="my-label">CSS</label>
 
 
        <input className="my-checkbox" type="checkbox"        onChange={(e)=>{handleChange('code10',e.target.value)}}   value="javascript" />
@@ -287,15 +367,6 @@ const App = () => {
        </div>
        
       
-
-      {/* <div className="form-wrapper">
-        <label className="form-label">Yabancı Dil:</label>
-          <input className="form-input"
-            type="text"
-            value={inputs.languages}
-            onChange={(e)=>{handleChange('languages',e.target.value)}}
-            />  
-       </div> */}
         
 
 
@@ -360,9 +431,21 @@ const App = () => {
 
 
        <div className="">
-          <label className="form-label-cv">CV ve Ön Yazı Yükleyiniz:</label>
+          <label className="form-label-cv">CV Yükleyiniz:</label>
             <input className="form-input-cv"
               type="file"  
+              multiple
+              onChange={(e)=>{console.log(e.target.files)}} 
+              />
+        </div>
+
+
+
+        <div className="">
+          <label className="form-label-cv">Ön Yazı Yükleyiniz:</label>
+            <input className="form-input-cv"
+              type="file"  
+              multiple
               onChange={(e)=>{console.log(e.target.files)}} 
               />
         </div>

@@ -100,6 +100,18 @@
 
 
 
+.ust-baslıklar{
+  color: #040405;
+  font-size: 21px;
+  margin-bottom: 20px;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+
+
 .form-label{
   color: #262b37;
   font-size: 17px;
@@ -129,12 +141,21 @@
 
 
 
-.form-input-cv{
-  margin-bottom: 40px;
-  margin-left: 20px;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-  color: #48566a;
+
+.rmsc{
+  --rmsc-bg: #f4fbff !important;
+  --rmsc-radius: 10px !important;
+  --rmsc-main:#0c3e83 !important;
+}
+
+
+
+.react-tel-input .form-control{
+  background-color: #f4fbff !important;
+  height: 40px !important;
+  color:#48566a !important ;
+  font-family: 'Inter', sans-serif !important;
+  border-radius: 7px !important;
 }
 
 
@@ -208,7 +229,7 @@
 
 
 
-.form-input-cinsiyet{
+.form-input-select{
   /* width: 100%; */
   height: 40px;
   border: none;
@@ -224,21 +245,6 @@
 }
 
 
-
-.form-input-pozisyon{
-  /* width: 100%; */
-  height: 40px;
-  border: none;
-  color: #48566a;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-radius: 10px;
-  margin-bottom: 10px;
-  background: #f4fbff;
-  border: 0.5px solid darkgrey;
-  font-family: 'Inter', sans-serif;
-  font-size: 14px;
-}
 
 
 
@@ -251,15 +257,15 @@
 
 
 
-.ust-baslıklar{
-  color: #040405;
-  font-size: 21px;
-  margin-bottom: 20px;
+.form-input-cv{
+  margin-bottom: 40px;
+  margin-left: 20px;
   font-family: 'Inter', sans-serif;
-  font-weight: bold;
-  padding-bottom: 15px;
-  padding-top: 10px;
+  font-size: 14px;
+  color: #48566a;
 }
+
+
 
 
 
