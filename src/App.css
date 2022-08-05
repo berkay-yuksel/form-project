@@ -2,8 +2,6 @@
 
 
 .page_container img{
-  /* margin: 2em; */
-  /* position: sticky; */
   top: 2em;
   margin: 2em auto;
   display: block;
@@ -12,7 +10,6 @@
 
 
 .form_section {
-  /* margin: 10vh 0; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -35,7 +32,8 @@
 .form_container label {
   /* margin: 1em; */
   /* width: 40vw; */
-}
+} 
+
 
 
 
@@ -141,7 +139,7 @@
 
 
 
-
+/* yabancı dil input */
 .rmsc{
   --rmsc-bg: #f4fbff !important;
   --rmsc-radius: 10px !important;
@@ -162,7 +160,6 @@
 
 
 .form-input{
-  /* width: 100%; */
   height: 40px;
   border: none;
   color: #48566a;
@@ -170,7 +167,7 @@
   padding-right: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: #f4fbff;
+  background-color: #f4fbff;
   border: 0.5px solid darkgrey;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -179,7 +176,6 @@
 
 
 .form-input-number{
-  /* width: 100%; */
   height: 40px;
   border: none;
   color: #48566a;
@@ -187,7 +183,7 @@
   padding-right: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: #f4fbff;
+  background-color: #f4fbff;
   border: 0.5px solid darkgrey;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -196,7 +192,6 @@
 
 
 .form-input-email{
-  /* width: 100%; */
   height: 40px;
   border: none;
   color: #48566a;
@@ -204,7 +199,7 @@
   padding-right: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: #f4fbff;
+  background-color: #f4fbff;
   border: 0.5px solid darkgrey;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -213,7 +208,6 @@
 
 
 .form-input-date{
-  /* width: 100%; */
   height: 40px;
   border: none;
   color: #48566a;
@@ -221,7 +215,7 @@
   padding-right: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: #f4fbff;
+  background-color: #f4fbff;
   border: 0.5px solid darkgrey;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -230,7 +224,6 @@
 
 
 .form-input-select{
-  /* width: 100%; */
   height: 40px;
   border: none;
   color: #48566a;
@@ -238,7 +231,7 @@
   padding-right: 16px;
   border-radius: 10px;
   margin-bottom: 10px;
-  background: #f4fbff;
+  background-color: #f4fbff;
   border: 0.5px solid darkgrey;
   font-family: 'Inter', sans-serif;
   font-size: 14px;
@@ -254,6 +247,7 @@
   font-size: 14px;
   border-radius: 10px;
 }
+
 
 
 
@@ -293,13 +287,7 @@
 }
 
 
-.form-input-cinsiyet:focus{
+.form-input-select:focus{
   border: 2px solid #0c3e83;
   outline: none !important;
 }
-
-
-.form-input-pozisyon:focus{
-  border: 2px solid #0c3e83;
-  outline: none !important;
-} 

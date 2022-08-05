@@ -10,9 +10,10 @@ import { MultiSelect } from "react-multi-select-component";
 
 
 const App = () => {
+
   const [inputs, setInputs] = useState({
     username:'',
-    tc:'',
+    //tc:'',
     birthday:'',
     cinsiyet:'',
     medenidurum:'',
@@ -26,6 +27,8 @@ const App = () => {
     referans:'',
     basarı:'',
     hobi:'',
+    ekbilgisayarbilgisi:'',
+    ekdilbilgisi:'',
   });
   
 
@@ -34,7 +37,7 @@ const App = () => {
 
   const initialState={
     username:'',
-    tc:'',
+    //tc:'',
     birthday:'',
     cinsiyet:'',
     medenidurum:'',
@@ -48,6 +51,8 @@ const App = () => {
     referans:'',
     basarı:'',
     hobi:'',
+    ekbilgisayarbilgisi:'',
+    ekdilbilgisi:'',
   }
   
   
@@ -81,10 +86,6 @@ const App = () => {
 
 
   const handleChange = (key,value) => {
-    // console.log(event.target.value);
-    // const name = event.target.name;
-    // const value = event.target.value;
-    // setInputs((values) => ({ ...values, [name]: value }));
     setInputs({...inputs,[key]:value})
   };
 
@@ -98,6 +99,7 @@ const App = () => {
       clearState();
       alert('Bilgileriniz Gönderildi.');
     }, 1000);
+
    };
 
 
@@ -133,14 +135,14 @@ const App = () => {
          
 
 
-       <div className="form-wrapper">
+       {/* <div className="form-wrapper">
           <label className="form-label">T.C. Numarası:</label>
             <input className="form-input-number"
               type="number"
               value={inputs.tc}
               onChange={(e)=>{handleChange('tc',e.target.value)}}
             />
-        </div>
+        </div> */}
 
 
 
@@ -202,10 +204,9 @@ const App = () => {
 
       <div className="form-wrapper">
          <label className="form-label">Telefon Numarası:</label>
-            <ReactPhoneInput className=""
+            <ReactPhoneInput 
                country={'tr'}
                value={inputs.phone}
-               // onChange={(e)=>{console.log(e)}}
               onChange={(e)=>{handleChange('phone',e)}}
             />
         </div>
@@ -235,7 +236,7 @@ const App = () => {
 
 
 
-           <div className="form-wrapper">
+          <div className="form-wrapper">
            <label className="form-label">Üniversite Bölümü:</label>
               <select className="form-input-select"
                 value={inputs.bolum}
@@ -252,36 +253,14 @@ const App = () => {
 
 
 
-     {/* <div className="form-wrapper">
-        <label className="form-label">Üniversite:</label>
-           <input className="form-input"
-            type="text"
-            value={inputs.universite}
-            onChange={(e)=>{handleChange('universite',e.target.value)}}
-            />
-      </div>
-
-
-
-      <div className="form-wrapper">
-       <label className="form-label">Bölüm:</label>
-         <input className="form-input"
-            type="text"
-            value={inputs.bolum}
-            onChange={(e)=>{handleChange('bolum',e.target.value)}}
-            />
-        </div> */}
-
-
-
-
         <label className="ust-baslıklar">
           Başvuru Yapılan Pozisyon
         </label>
             
 
+
         <div className="form-wrapper">
-           <label> </label>
+           <label></label>
              <select className="form-input-select"
               value={inputs.pozisyon}
               onChange={(e)=>{handleChange('pozisyon',e.target.value)}}>
@@ -309,6 +288,17 @@ const App = () => {
                labelledBy="Select"
                />
           </div>
+
+
+
+          <div className="form-wrapper">
+          <label className="form-label">Varsa Dil Sınavını Ve Puanını Ekleyiniz: </label>
+            <input className="form-input"
+              type="text"
+              value={inputs.ekdilbilgisi}
+              onChange={(e)=>{handleChange('ekdilbilgisi',e.target.value)}}
+            />
+         </div> 
 
 
 
@@ -368,6 +358,17 @@ const App = () => {
        
       
         
+
+       <div className="form-wrapper">
+          <label className="form-label">Eklemek İstediğiniz Diğer Bilgisayar Bilgileri: </label>
+            <input className="form-input"
+              type="text"
+              value={inputs.ekbilgisayarbilgisi}
+              onChange={(e)=>{handleChange('ekbilgisayarbilgisi',e.target.value)}}
+            />
+         </div> 
+
+
 
 
         <label className="ust-baslıklar">
